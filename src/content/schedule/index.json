@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2024-02-26",
+    "location": "DM Sem J",
+    "type": "weekly",
+    "host": "Tristan Canterbury",
+    "topic": "Paths to Knowledge: The methods of belief assessment in plasticity mechanisms"
+  },
+  {
+    "date": "2024-03-04",
+    "location": "Exchange Red",
+    "type": "monthly",
+    "host": "Andrew Young",
+    "topic": "Senescence"
+  },
+  {
+    "date": "2024-03-11",
+    "location": "DM Sem L",
+    "type": "weekly",
+    "host": "Lucy Winder",
+    "topic": "Why do individuals differ in fitness?"
+  },
+  {
+    "date": "2024-04-08",
+    "location": "TBC",
+    "type": "monthly",
+    "host": "Erik Postma",
+    "topic": "An introduction to quantitative genetics"
+  },
+  {
+    "date": "2024-04-23",
+    "location": "TBC",
+    "type": "weekly",
+    "host": "Rachel Miller",
+    "topic": "TBC"
+  },
+  {
+    "date": "2024-05-06",
+    "location": "TBC",
+    "type": "monthly",
+    "host": "Neeltje Boogert",
+    "topic": "TBC"
+  }
+]
