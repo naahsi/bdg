@@ -1,14 +1,7 @@
 [
   {
-    "date": "2024-02-26",
-    "location": "DM Sem J",
-    "type": "weekly",
-    "host": "Tristan Canterbury",
-    "topic": "Paths to Knowledge: The methods of belief assessment in plasticity mechanisms"
-  },
-  {
     "date": "2024-03-04",
-    "location": "Exchange Red",
+    "location": "EXCH Red",
     "type": "monthly",
     "host": "Andrew Young",
     "topic": "Senescence"
@@ -22,21 +15,21 @@
   },
   {
     "date": "2024-04-08",
-    "location": "TBC",
+    "location": "DM Sem G",
     "type": "monthly",
     "host": "Erik Postma",
     "topic": "An introduction to quantitative genetics"
   },
   {
     "date": "2024-04-23",
-    "location": "TBC",
+    "location": "PL Lecture 3",
     "type": "weekly",
     "host": "Rachel Miller",
-    "topic": "TBC"
+    "topic": "Comparative and developmental cognition"
   },
   {
     "date": "2024-05-06",
-    "location": "TBC",
+    "location": "EXCH Red",
     "type": "monthly",
     "host": "Neeltje Boogert",
     "topic": "TBC"
