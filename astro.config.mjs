@@ -1,7 +1,4 @@
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-export default defineConfig({
-  site: 'https://naahsi.github.io',
-  base: '/bdg',
-});
+export default defineConfig({});
