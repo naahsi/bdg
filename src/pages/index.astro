@@ -23,8 +23,8 @@ const { data } = await getEntry('schedule', 'index');
 		</header>
 		<main>
       <aside>
-        If you would like to host, join our mailing list, or ask us anything else, please contact
-        <a href="mailto:is460@exeter.ac.uk">is460@exeter.ac.uk</a>.
+        <p>If you would like to host a session, you can sign up using <a href="https://universityofexeteruk-my.sharepoint.com/:x:/r/personal/is460_exeter_ac_uk/Documents/Behaviour%20Discussion%20Group.xlsx?d=wef31c5a172fc4dcc918a22a41f2c6d93&csf=1&web=1&e=IUBK53">this</a> Excel sheet. You will need an University of Exeter email address to access it.</p>
+        <p>For any queries or if you would like to sign up to our mailing list, please contact <a href="mailto:is460@exeter.ac.uk">is460@exeter.ac.uk</a>.</p>
       </aside>
       <section>
         <p>We are a group of postgraudate students, postdoctoral researchers, lecturers, and professors fascinated by animal behaviour. Based at University of Exeter's Penryn campus, we hold sessions every Monday at noon. Here, people at <b><i>any stage</i></b> of their academic journey can present their research, works in progress, or simply topics they find interesting.</p>
@@ -257,7 +257,7 @@ const { data } = await getEntry('schedule', 'index');
   header img { position: absolute; right: 0; }
   main { padding: var(--pad); display: grid; align-items: flex-start; }
   aside { padding: 1rem; background-color: #ebebeb; }
-  section > p + p { margin-top: 1rem; }
+  :is(aside, section) > p + p { margin-top: 1rem; }
   section p + ol { margin-top: 0.5rem; }
   section ol { display: grid; row-gap: 0.5rem; }
   section h2 { margin-top: 2rem; }
