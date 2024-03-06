@@ -35,10 +35,24 @@
     "topic": "Comparative and developmental cognition"
   },
   {
+    "date": "2024-04-29",
+    "location": "TBC",
+    "type": "weekly",
+    "host": "Luca Hahn",
+    "topic": "Social structure and social learning"
+  },
+  {
     "date": "2024-05-06",
     "location": "EXCH Red",
     "type": "monthly",
     "host": "Neeltje Boogert",
     "topic": "TBC"
+  },
+  {
+    "date": "2024-06-10",
+    "location": "TBC",
+    "type": "weekly",
+    "host": "Graham Birch",
+    "topic": "Conflicts of interest in maintaining scent recognition labels in banded mongoose groups"
   }
 ]
