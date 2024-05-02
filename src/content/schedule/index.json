@@ -1,23 +1,30 @@
 [
   {
-    "date": "2024-04-22",
-    "location": "DM Sem K",
-    "type": "weekly",
-    "host": "Journal Club",
-    "topic": "Sociality shapes the life histories of animals along the fast-slow continuum, but does not affect their senescence"
-  },
-  {
-    "date": "2024-05-06",
-    "location": "EXCH Red",
+    "date": "2024-05-07",
+    "location": "EXCH Courtyard 5",
     "type": "monthly",
-    "host": "Neeltje Boogert",
-    "topic": "TBC"
+    "host": "Erik Postma",
+    "topic": "Quantitative genetics (cont.)"
   },
   {
-    "date": "2024-06-10",
+    "date": "2024-05-13",
+    "location": "EXCH Green",
+    "type": "monthly",
+    "host": "Luca Hahn",
+    "topic": "Social structure and social learning"
+  },
+  {
+    "date": "2024-05-20",
     "location": "TBC",
     "type": "weekly",
     "host": "Graham Birch",
     "topic": "Conflicts of interest in maintaining scent recognition labels in banded mongoose groups"
+  },
+  {
+    "date": "2024-06-24",
+    "location": "TBC",
+    "type": "monthly",
+    "host": "Michael Cant",
+    "topic": "More than altruism: unsolved problems in social evolution"
   }
 ]
