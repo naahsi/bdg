@@ -11,18 +11,25 @@
     "location": "EXCH Green",
     "type": "weekly",
     "host": "Luca Hahn",
-    "topic": "Social structure and social learning"
+    "topic": "Dynamic feedback loops and co-evolution between sociality and cognition"
   },
   {
     "date": "2024-05-20",
-    "location": "TBC",
+    "location": "EXCH Courtyard 4",
     "type": "weekly",
     "host": "Graham Birch",
     "topic": "Conflicts of interest in maintaining scent recognition labels in banded mongoose groups"
   },
   {
+    "date": "2024-05-28",
+    "location": "EXCH Red",
+    "type": "weekly",
+    "host": "Dan Sankey",
+    "topic": "How cooperative breeders solve their sustainability crisis"
+  },
+  {
     "date": "2024-06-24",
-    "location": "TBC",
+    "location": "DM Sem I",
     "type": "monthly",
     "host": "Michael Cant",
     "topic": "More than altruism: unsolved problems in social evolution"
