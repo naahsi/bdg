@@ -28,10 +28,24 @@
     "topic": "How cooperative breeders solve their sustainability crisis"
   },
   {
+    "date": "2024-06-17",
+    "location": "DDM Sem C",
+    "type": "weekly",
+    "host": "Dan Sankey",
+    "topic": "How cooperative breeders solve their sustainability crisis (cont.)"
+  },
+  {
     "date": "2024-06-24",
     "location": "DM Sem I",
     "type": "monthly",
     "host": "Michael Cant",
     "topic": "More than altruism: unsolved problems in social evolution"
+  },
+  {
+    "date": "2024-07-01",
+    "location": "TBC",
+    "type": "weekly",
+    "host": "Camilla Cenni",
+    "topic": "Tool use in non-human primates"
   }
 ]
