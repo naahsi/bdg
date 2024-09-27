@@ -2,6 +2,9 @@
 import { getEntry } from 'astro:content';
 
 const { data } = await getEntry('schedule', 'index');
+
+console.log(Astro.request.headers);
+
 ---
 
 <html lang="en">
