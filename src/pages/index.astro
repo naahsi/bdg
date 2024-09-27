@@ -2,9 +2,7 @@
 import { getEntry } from 'astro:content';
 
 const { data } = await getEntry('schedule', 'index');
-
-console.log(Astro.request.headers);
-
+const ip = Astro.clientAddress;
 ---
 
 <html lang="en">
@@ -242,6 +240,7 @@ console.log(Astro.request.headers);
           <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
         </svg>        
       </button>
+      <small>{ip || 'no ip'}</small>
     </footer>
 	</body>
 </html>
