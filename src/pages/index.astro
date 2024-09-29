@@ -4,10 +4,10 @@ import sqlite3 from 'sqlite3';
 
 const { data } = await getEntry('schedule', 'index');
 const db = new sqlite3.Database('./main.db');
-const ip = Astro.clientAddress;
-const date = new Date().toISOString();
+//const ip = Astro.clientAddress;
+//const date = new Date().toISOString();
 
-db.run(`INSERT INTO analytics VALUES('${ip}', '${date}')`);
+//db.run(`INSERT INTO analytics VALUES('${ip}', '${date}')`);
 ---
 
 <html lang="en">
