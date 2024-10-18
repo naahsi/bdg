@@ -16,6 +16,7 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
+lunar-bonus-356413-199af9c24ad9.json
 
 # macOS-specific files
 .DS_Store
