@@ -41,7 +41,6 @@ const parse = async (sheet) => (
 
 const programme = await parse('Sessions 24-25');
 const pastSessions = await parse('Sessions 23-24');
-
 ---
 
 <html lang="en">
@@ -86,7 +85,7 @@ const pastSessions = await parse('Sessions 23-24');
                 <div>
                   <h3>{s.host}</h3>
                   <p><small>on</small> <b>{s.topic || 'TBC'}</b></p>
-                  <p><small>in</small> <b>{s.location || 'TBC'}</b></p>
+                  <p><small>in</small> <b>{s.roombooked || 'TBC'}</b></p>
                 </div>
               </li>
             );
