@@ -52,27 +52,23 @@ const pastSessions = await parse('Sessions 23-24');
 		<title>Behaviour Discussion Group | University of Exeter</title>
 	</head>
 	<body>
-    <header>
+    <header id="header">
       <h1>Behaviour<br />Discussion<br />Group</h1>
       <nav>
         <a href="#programme">Programme</a>
+        <a href="#about">About</a>
         <a href="#past-sessions">Past sessions</a>
+        <a href="mailto:is460@exeter.ac.uk">Contact</a>
       </nav>
       <div>
         <p>If you would like to present, you can sign up <a href="https://docs.google.com/spreadsheets/d/16jbq_VvxwHifdfKFoB327DYrQOJr3dsKCN5bxc5VRS0/edit?usp=sharing">here</a>.</p>
-        <p>For any queries or if you'd like to join our <b>mailing list</b>, please contact <a href="mailto:is460@exeter.ac.uk">is460@exeter.ac.uk</a>.</p>
+        <p>If you'd like to join our <b>mailing list</b>, please <a href="mailto:is460@exeter.ac.uk">contact us</a>.</p>
       </div>
+      <img src="banner.png" alt="">
     </header>
     <main>
-      <section id="intro">
-        <p>We are a group of postgraudate students, postdoctoral researchers, lecturers, and professors fascinated by animal behaviour. Based at University of Exeter's Penryn campus, we hold sessions every Monday at noon. Here, people at <b><i>any stage</i></b> of their academic journey can present their research, works in progress, or simply topics they find interesting.</p>
-        <p>There are two types of sessions:</p>
-        <p><b>Monthly</b> sessions are led by members of staff and include complimentary tea, coffee, and snacks.</p>
-        <p><b>Weekly</b> sessions run on all other Mondays and are open to anyone who might want to present or discuss their research interests. These, too, have tea and coffee but no snacks. If no one has signed up for a slot by the Wednesday of the preceding week, this turns into a jorunal club for which anyone can propose papers.</p>
-      </section>
       <section id="programme">
-        <h2>Programme*</h2>
-        <small>*The sessions will fill up as people sign up so be sure to check back</small>
+        <h2>Programme</h2>
         <ul>
           {programme.filter((s) => s.host).map((s) => {
             const date = s.date.split('/').reverse();
@@ -84,13 +80,22 @@ const pastSessions = await parse('Sessions 23-24');
                 </time>
                 <div>
                   <h3>{s.host}</h3>
-                  <p><small>on</small> <b>{s.topic || 'TBC'}</b></p>
-                  <p><small>in</small> <b>{s.roombooked || 'TBC'}</b></p>
+                  <p><small>Topic</small> {s.topic || 'TBC'}</p>
+                  <p><small>Location</small> {s.roombooked || 'TBC'}</p>
                 </div>
               </li>
             );
           })}
         </ul>
+      </section>
+      <section id="about">
+        <h2>About</h2>
+        <div>
+          <p>We are a group of postgraudate students, postdoctoral researchers, lecturers, and professors fascinated by animal behaviour. Based at University of Exeter's Penryn campus, we hold sessions every Monday at noon. Here, people at <b><i>any stage</i></b> of their academic journey can present their research, works in progress, or simply topics they find interesting.</p>
+          <p>There are two types of sessions:</p>
+          <p><b>Monthly</b> sessions are led by members of staff and include complimentary tea, coffee, and snacks.</p>
+          <p><b>Weekly</b> sessions run on all other Mondays and are open to anyone who might want to present or discuss their research interests. These, too, have tea and coffee but no snacks. If no one has signed up for a slot by the Wednesday of the preceding week, this turns into a jorunal club for which anyone can propose papers.</p>
+        </div>
       </section>
       <section id="past-sessions">
         <h2>Past sessions</h2>
@@ -105,7 +110,7 @@ const pastSessions = await parse('Sessions 23-24');
                 </time>
                 <div>
                   <h3>{s.host}</h3>
-                  <p><small>on</small> <b>{s.topic || 'TBC'}</b></p>
+                  <p><small>Topic</small> {s.topic || 'TBC'}</p>
                 </div>
               </li>
             );
@@ -115,6 +120,11 @@ const pastSessions = await parse('Sessions 23-24');
     </main>
     <footer>
       <a href="https://www.exeter.ac.uk"><img src="exeter.png" alt=""></a>
+      <a href="#header">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        </svg>        
+      </a>
     </footer>
 	</body>
 </html>
@@ -123,69 +133,81 @@ const pastSessions = await parse('Sessions 23-24');
   /* Global */
   @font-face { font-family: 'Raleway'; src: url('Raleway-VariableFont_wght.ttf'); font-style: normal; }
   @font-face { font-family: 'Raleway'; src: url('Raleway-Italic-VariableFont_wght.ttf'); font-style: italic; }
-  :root { --blue: #4062bb; --dark-green: #003C3C; --light-green: #00dea5;  }
+  :root { --blue: #4062bb; --lime: #a2faa3; --teal: #59c3c3; --red: #f45b69;  }
 	* { margin: 0; padding: 0; box-sizing: border-box; }
 	body { font-family: 'Raleway'; }
   a { text-decoration: none; color: inherit; }
+  p a { color: var(--blue); border-bottom: 1px solid; }
+  p a:hover { color: var(--teal); }
   ul, ol { list-style-type: none; }
-  :is(p, small, time) { line-height: 1.5; }
 
   @media (min-width: 768px) {
-    :root { --space: 2rem; }
-    body { display: grid; grid-template-columns: 1fr 3fr; align-items: baseline; }
+    :root { --space: 4rem; }
   }
 
   @media (max-width: 767px) {
     :root { --space: 1rem; }
   }
-  
+
   /* Header */
   header { padding: var(--space); }
   header h1 { font-weight: 900; }
-  header nav { margin-top: 1rem; }
-  header p + p { margin-top: 1em; }
+  header nav a { padding: 0.5em; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; background-color: var(--lime); }
+  header nav a:hover { background-color: var(--teal); }
+  header p + p { margin-top: 1rem; }
+  header img { object-fit: contain; }
 
   @media (min-width: 768px) {
-    header { height: 100vh; position: sticky; top: 0; }
-    header h1 { font-size: 4rem; }
-    header div { margin-top: 8rem; }
+    header { position: relative; }
+    header h1 { font-size: 6rem; }
+    header nav { display: flex; column-gap: 0.5rem; margin-top: 4rem; }
+    header div { margin-top: 4rem; }
+    header img { position: absolute; right: 0; top: 0; height: 100%; width: 50%; padding: 4rem; }
   }
 
   @media (max-width: 767px) {
-    header h1 { font-size: 3rem; }
-    header div { margin-top: 2rem; font-size: 0.8rem; }
+    header h1 { font-size: 14vw; }
+    header nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem; margin-top: 2rem; }
+    header nav a { display: grid; place-content: center; }
+    header div { margin-top: 2rem; }
+    header p { font-size: 0.85rem; }
+    header img { width: 100%; height: 50vw; margin-top: 4rem; }
   }
 
   /* Main */
   main { padding: var(--space); }
-  main section + section { margin-top: 4rem; }
-  main #intro p + p { margin-top: 1em; }
-  main :is(#programme, #past-sessions) ul { display: grid;  gap: 2rem 4rem; margin-top: 2rem; }
-  main #past-sessions time { font-size: 0.85rem; }
-  main #past-sessions h3 { font-size: 1rem; }
-  main #past-sessions p { font-size: 0.85rem; margin-top: 0.25em; }
-  main #past-sessions b { font-weight: 600; }
+  section:not(#programme) { margin-top: 4rem; }
+  section ul { display: grid; row-gap: 2rem; }
+  section time { font-size: 0.85rem; font-weight: 500; padding: 0.25em 0.5em; border: 1px solid; color: var(--red); }
+  section h3 { margin-top: 1rem; }
+  section h3 + p { margin-top: 0.5rem; }
+  section li p { display: grid; grid-template-columns: 8ch 1fr; align-items: baseline; }
+  section li p + p { margin-top: 0.25rem; }
+  section small { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+
+  #about p + p { margin-top: 1rem; }
 
   @media (min-width: 768px) {
-    main { grid-row: 1; grid-column: 2; }
-    main :is(#programme, #past-sessions) ul { grid-template-columns: 1fr 1fr; align-items: baseline; }
-    main :is(#programme, #past-sessions) li { display: grid; grid-template-columns: 8rem 1fr; }
+    section { display: grid; grid-template-columns: 1fr 2fr; column-gap: 4rem; align-items: flex-start; border-top: 1px solid; padding-top: 3rem; }
   }
 
   @media (max-width: 767px) {
-    main #intro { font-size: 0.9rem; }
+    main { margin-top: 2rem; }
+    section h2 { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px dashed; }
   }
 
   /* Footer */
-  footer { padding: var(--space); }
-  footer a { display: block; }
-  footer img { height: 4rem; }
+  footer { display: flex; justify-content: space-between; align-items: center; margin: 2rem var(--space); border-top: 1px solid; }
 
   @media (min-width: 768px) {
-    footer { position: sticky; bottom: 0; }
+    footer { padding-top: 3rem; }
+    footer img { height: 3.5rem; }
+    footer svg { height: 2rem; }
   }
 
   @media (max-width: 767px) {
-    footer { margin-top: 3rem; }
+    footer { padding-top: 2rem; }
+    footer img { height: 2.5rem; }
+    footer svg { height: 1.5rem; }
   }
 </style>
