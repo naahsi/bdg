@@ -178,14 +178,16 @@ const pastSessions = await parse('Sessions 23-24');
   main { padding: var(--space); }
   section:not(#programme) { margin-top: 4rem; }
   section ul { display: grid; row-gap: 2rem; }
-  section time { font-size: 0.85rem; font-weight: 500; padding: 0.25em 0.5em; border: 1px solid; color: var(--red); }
+  section time { font-size: 0.85rem; font-weight: 500; padding: 0.25em 0.5em; border: 1px solid; }
   section h3 { margin-top: 1rem; }
   section h3 + p { margin-top: 0.5rem; }
   section li p { display: grid; grid-template-columns: 8ch 1fr; align-items: baseline; }
   section li p + p { margin-top: 0.25rem; }
   section small { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
 
+  #programme time { color: var(--red); }
   #about p + p { margin-top: 1rem; }
+  #past-sessions ul { color: #777; }
 
   @media (min-width: 768px) {
     section { display: grid; grid-template-columns: 1fr 2fr; column-gap: 4rem; align-items: flex-start; border-top: 1px solid; padding-top: 3rem; }
