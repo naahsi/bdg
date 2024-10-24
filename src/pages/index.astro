@@ -72,12 +72,15 @@ const pastSessions = await parse('Sessions 23-24');
         <ul>
           {programme.filter((s) => s.host).map((s) => {
             const date = s.date.split('/').reverse();
+            const time = s.time ? s.time.split('-').map((i) => Number(i.slice(0, 2))) : false;
+            const snacks = time ? time[1] - time[0] > 1 : false;
             
             return (
               <li>
                 <time datetime={date.join('-')}>
                   {new Date(date).toLocaleDateString('en-GB', { month: 'short', day: 'numeric', year: '2-digit' })}
                 </time>
+                ☕️ {snacks && '🍪'}
                 <div>
                   <h3>{s.host}</h3>
                   <p><small>Topic</small> {s.topic || 'TBC'}</p>
@@ -179,7 +182,7 @@ const pastSessions = await parse('Sessions 23-24');
   main { padding: var(--space); }
   section:not(#programme) { margin-top: 4rem; }
   section ul { display: grid; row-gap: 2rem; }
-  section time { font-size: 0.85rem; font-weight: 500; padding: 0.25em 0.5em; border: 1px solid; }
+  section time { margin-right: 0.5rem; font-size: 0.85rem; font-weight: 500; padding: 0.25em 0.5em; border: 1px solid; }
   section h3 { margin-top: 1rem; }
   section h3 + p { margin-top: 0.5rem; }
   section li p { display: grid; grid-template-columns: 8ch 1fr; align-items: baseline; }
