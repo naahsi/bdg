@@ -68,7 +68,10 @@ const pastSessions = await parse('Sessions 23-24');
     </header>
     <main>
       <section id="programme">
-        <h2>Programme</h2>
+        <hgroup>
+          <h2>Programme</h2>
+          <p>New sessions are added as people sign up so be sure to check back often or join our <a href="mailto:is460@exeter.ac.uk">mailing list</a>.</p>
+        </hgroup>
         <ul>
           {programme.filter((s) => s.host).map((s) => {
             const date = s.date.split('/').reverse();
@@ -99,6 +102,7 @@ const pastSessions = await parse('Sessions 23-24');
           <p>There are two types of sessions:</p>
           <p><b>Monthly</b> sessions are led by members of staff and include complimentary tea, coffee, and snacks.</p>
           <p><b>Weekly</b> sessions run on all other Mondays and are open to anyone who might want to present or discuss their research interests. These, too, have tea and coffee but no snacks. If no one has signed up for a slot by the Wednesday of the preceding week, this turns into a jorunal club for which anyone can propose papers.</p>
+          <p>The <i>Behaviour Discussion Group (BDG)</i> is currently organised by Dan Sankey (postdoc), Ishaan Sinha (PhD), and Lucy Winder (postdoc).</i></p>
         </div>
       </section>
       <section id="past-sessions">
@@ -157,9 +161,10 @@ const pastSessions = await parse('Sessions 23-24');
   header { padding: var(--space); }
   header h1 { font-weight: 900; }
   header nav a { padding: 0.5em; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; background-color: var(--lime); }
-  header nav a:hover { background-color: var(--teal); }
+  header nav a:hover { background-color: var(--blue); color: #fff; }
   header p + p { margin-top: 1rem; }
   header img { object-fit: contain; }
+  :is(p, small) { line-height: 1.5; }
 
   @media (min-width: 768px) {
     header { position: relative; }
@@ -187,9 +192,11 @@ const pastSessions = await parse('Sessions 23-24');
   section h3 + p { margin-top: 0.5rem; }
   section li p { display: grid; grid-template-columns: 8ch 1fr; align-items: baseline; }
   section li p + p { margin-top: 0.25rem; }
-  section small { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+  section li small { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
 
   #programme time { color: var(--red); }
+  #programme hgroup p { font-size: 0.85rem; margin-top: 1rem; }
+  #about p:last-child { color: #777; }
   #about p + p { margin-top: 1rem; }
   #past-sessions ul { color: #777; }
 
@@ -199,7 +206,7 @@ const pastSessions = await parse('Sessions 23-24');
 
   @media (max-width: 767px) {
     main { margin-top: 2rem; }
-    section h2 { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px dashed; }
+    section > :is(h2, hgroup) { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px dashed; }
   }
 
   /* Footer */
