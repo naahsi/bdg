@@ -29,9 +29,11 @@ const parse = async (sheet) => (
 			const obj = {};
 
 			row.forEach((cell, i) => {
-				const key = values[0][i].replace(/ /g, '').toLowerCase();
+        if (values[0][i]) {
+          const key = values[0][i].replace(/ /g, '').toLowerCase();
 
-				obj[key] = cell;
+				  obj[key] = cell;
+        }
 			});
 
 			return obj;
